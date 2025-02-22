@@ -1,5 +1,4 @@
 import pygame
- 
 
 
 class Ship:
@@ -18,24 +17,23 @@ class Ship:
         # Start each new ship at the bottom center of the screen.
         self.rect.midbottom = self.screen_rect.midbottom
 
-        # Store a float for the ships exact horizontal position.
+        # Store a float for the ship's exact horizontal position.
         self.x = float(self.rect.x)
 
-        # Movement flag; start with a ship that's not moving.
+        # Movement flags; start with a ship that's not moving.
         self.moving_right = False
         self.moving_left = False
 
-    def update(Self):
-        """Update the ship's position based on the movement flags."""
-        # Update the ship's X value, not the rect
-        if Self.moving_right and Self.rect.right < Self.screen_rect.right: 
-            Self.x += Self.settings.ship_speed
-        if Self.moving_left and Self.rect.left > 0:
-            Self.x -= Self.settings.ship_speed
-
+    def update(self):
+        """Update the ship's position based on movement flags."""
+        # Update the ship's x value, not the rect.
+        if self.moving_right and self.rect.right < self.screen_rect.right:
+            self.x += self.settings.ship_speed
+        if self.moving_left and self.rect.left > 0:
+            self.x -= self.settings.ship_speed
+            
         # Update rect object from self.x.
-        Self.rect.x = Self.x
-        
+        self.rect.x = self.x
 
     def blitme(self):
         """Draw the ship at its current location."""
