@@ -89,7 +89,7 @@ class AlienInvasion:
 
         current_x = alien_width
         while current_x < (self.settings.screen_width - 2 * alien_width):
-            self.create_alien(current_x)
+            self._create_alien(current_x)
             current_x += 2 * alien_width
 
     def _create_alien(self, x_position):
