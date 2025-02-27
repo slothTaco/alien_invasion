@@ -1,7 +1,7 @@
 import pygame
-from pygame.sprite import sprite
+from pygame.sprite import Sprite
 
-class Alien(sprite):
+class Alien(Sprite):
     """A class to represent a single alien in the fleet."""
 
     def __init__(Self, ai_game):
@@ -15,7 +15,7 @@ class Alien(sprite):
 
         # Start eah new alien near the top left screen.
         Self.rect.x = Self.rect.width
-        Self,rect,y = Self.rect.height
+        Self.rect.y = Self.rect.height
 
         #Store teh alien's exct horizontal position.
         Self.x = float(Self.rect.x)
